@@ -94,10 +94,13 @@ WSGI_APPLICATION = 'soaialmedia.wsgi.application'
 # }
 
 
-DATABASES = {
-    "default": dj_database_url.parse("postgres://database_a3df_user:0229beyMe10SOwweevKncb4abjW0DSkw@dpg-cmh4u8nqd2ns73fobtc0-a.oregon-postgres.render.com/database_a3df")
-}
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators

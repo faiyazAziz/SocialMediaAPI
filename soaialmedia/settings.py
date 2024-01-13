@@ -81,15 +81,20 @@ WSGI_APPLICATION = 'soaialmedia.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'social',
+#         'USER': 'postgres',
+#         'PASSWORD': '2345',
+#         'HOST': 'localhost',
+#         'PORT': '5432'
+#     }
+# }
+
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'social',
-        'USER': 'postgres',
-        'PASSWORD': '2345',
-        'HOST': 'localhost',
-        'PORT': '5432'
-    }
+    "default": dj_database_url.parse("postgres://database_a3df_user:0229beyMe10SOwweevKncb4abjW0DSkw@dpg-cmh4u8nqd2ns73fobtc0-a.oregon-postgres.render.com/database_a3df")
 }
 
 
